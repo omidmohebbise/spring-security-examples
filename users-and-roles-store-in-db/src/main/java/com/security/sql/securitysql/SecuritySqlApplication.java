@@ -23,7 +23,7 @@ public class SecuritySqlApplication implements CommandLineRunner {
 
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         roleServices.initRoles();
         userService.initUsers(passwordEncoder.encode("123"));
     }

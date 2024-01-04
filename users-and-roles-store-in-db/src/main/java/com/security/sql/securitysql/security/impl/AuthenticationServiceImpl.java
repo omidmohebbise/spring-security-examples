@@ -26,7 +26,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public JwtAuthenticationResponse signin(SignInRequest request) {
+    public JwtAuthenticationResponse signIn(SignInRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
         var user = userRepository.findByUsername(request.getEmail())
